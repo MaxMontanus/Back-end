@@ -7,7 +7,7 @@ function dbConnect()
 
     try {
         // Hier maken we de database verbinding
-        $connection = new PDO("mysql:host=" . $db['server'] . ";dbname" . $db['database'] . ";port=" . $db['port'], $db['username'], $db['password']);
+        $connection = new PDO("mysql:host=" . $db['server'] . ";dbname=" . $db['database'] . ";port=" . $db['port'], $db['username'], $db['password']);
 
         // Database verbindings opties instellen
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
