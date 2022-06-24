@@ -1,11 +1,9 @@
 <?php 
 require 'functions.php';
 $connection = dbConnect ( ) ;
-<<<<<<< Updated upstream
-=======
 
 $result = $connection->query('SELECT * FROM `producten`')
->>>>>>> Stashed changes
+
 ?>
 
 <!DOCTYPE html>
