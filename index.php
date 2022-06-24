@@ -1,6 +1,11 @@
 <?php 
 require 'functions.php';
 $connection = dbConnect ( ) ;
+<<<<<<< Updated upstream
+=======
+
+$result = $connection->query('SELECT * FROM `producten`')
+>>>>>>> Stashed changes
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +16,9 @@ $connection = dbConnect ( ) ;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producten</title>
 
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta:wght@300;500&display=swap">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -30,9 +35,10 @@ $connection = dbConnect ( ) ;
                 <figure class="drank-lijst__foto" style="background-image: url(images/<?php echo $row['foto']; ?>)"></figure>
             <header>
                 <h3><?php echo $row['liter']; ?></h3>
-                <em><?php echo $row['prijs']; ?></em>
+                <em>€<?php echo $row['prijs']; ?></em>
             </header>
             <p><?php echo $row['beschrijving']; ?></p>
+            <a href="details.php?id=<?php echo $row['id']; ?>">Meer info</a>
         </article>
         <?php endforeach; ?>
 
